@@ -17,13 +17,13 @@ module SessionsHelper
     user == current_user
   end
 
-  # 返回 cookie 中记忆令牌对应的用户
+  # 返回 cookie 中记忆令牌对应的用户,返回当前登录的用户（如果有的话）
   def current_user
     if (user_id = session[:user_id])
       @current_user ||= User.find_by(id: user_id)  # 返回当前登录的用户（如果有的话）
     elsif (user_id = cookies.signed[:user_id])
       user = User.find_by(id: user_id)
-      if user && user.authenticated?(cookies[:remember_token])
+      if user && user.authenticated?(:remember, cookies[:remember_token])
         log_in user
         @current_user = user
       end
@@ -55,7 +55,7 @@ module SessionsHelper
     session.delete(:forwarding_url)
   end
 
-  # 存储后面需要使用的地址,实现友好的转向 
+  # 存储后面需要使用的地址,实现友好的转向
   def store_location
     session[:forwarding_url] = request.original_url if request.get?
   end
