@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**作品名:Now Voyager**，即**扬帆起航**。
 
-Things you may want to cover:
+取**“同舟共济扬帆起，乘风破浪万里航”**之意。
 
-* Ruby version
+新生大学全栈营Job-Listing魔改大赛参赛作品，也是我第一个自己的作品。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* 正在逐步完善中
 
 * ...
