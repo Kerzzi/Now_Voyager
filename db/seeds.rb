@@ -14,6 +14,23 @@ User.create!(name:  "admin",
              activated: true,
              activated_at: Time.zone.now)
 
+User.create!(name:  "test1",
+            email: "test1@kerzzi.com",
+            password:              "123456",
+            password_confirmation: "123456",
+            admin: false,
+            activated: true,
+            activated_at: Time.zone.now)
+
+User.create!(name:  "test2",
+            email: "test2@kerzzi.com",
+            password:              "123456",
+            password_confirmation: "123456",
+            admin: false,
+            activated: true,
+            activated_at: Time.zone.now)
+
+
 99.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
@@ -26,8 +43,58 @@ User.create!(name:  "admin",
                activated_at: Time.zone.now)
 end
 
+User.create!(name:  "test3",
+            email: "test3@kerzzi.com",
+            password:              "123456",
+            password_confirmation: "123456",
+            admin: false,
+            activated: true,
+            activated_at: Time.zone.now)
+
+User.create!(name:  "test4",
+            email: "test4@kerzzi.com",
+            password:              "123456",
+            password_confirmation: "123456",
+            admin: false,
+            activated: true,
+            activated_at: Time.zone.now)
+
+User.create!(name:  "test5",
+            email: "test5@kerzzi.com",
+            password:              "123456",
+            password_confirmation: "123456",
+            admin: false,
+            activated: true,
+            activated_at: Time.zone.now)
+
+
+User.create!(name:  "test6",
+            email: "test6@kerzzi.com",
+            password:              "123456",
+            password_confirmation: "123456",
+            admin: false,
+            activated: true,
+            activated_at: Time.zone.now)
+
+User.create!(name:  "test7",
+            email: "test7@kerzzi.com",
+            password:              "123456",
+            password_confirmation: "123456",
+            admin: false,
+            activated: true,
+            activated_at: Time.zone.now)
+
 users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(5)
   users.each { |user| user.microposts.create!(content: content) }
 end
+
+
+# Following relationships
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
