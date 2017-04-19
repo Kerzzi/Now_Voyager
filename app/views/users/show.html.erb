@@ -8,4 +8,14 @@
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+     <!-- 当用户没有发布微博时，不显示空列表。 -->
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
 </div>
