@@ -24,5 +24,8 @@ Rails.application.routes.draw do
   resources :relationships,       only: [:create, :destroy]
 
    resources :jobs
+   namespace :admin do
+     resources :jobs
+   end
 
 end
