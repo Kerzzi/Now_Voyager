@@ -42,6 +42,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
