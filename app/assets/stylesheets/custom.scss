@@ -66,6 +66,9 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
+
+  margin: 0 -15px 12px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+
   font-size: 1.7em;
   color: white;
   // text-transform: uppercase;
@@ -78,31 +81,55 @@ p {
   }
 }
 
+
 /* footer */
 
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
+.footer {
+  position: absolute;
+
+  font-size: 15px;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  // background-color: #111;
+  text-align: center;
+  .container {
+    margin-top: 20px;
+    color: #fff;
+    width: 100%;
   }
 }
+
+/*Footer*/
+// 
+// footer {
+//   background: #000;
+// }
+//
+// .soc-media-ul {
+//   display: flex;
+//   justify-content: center;
+// }
+//
+// .soc-media-ul li:not(:first-child) a {
+//   margin-left: 1em;
+// }
+//
+// .soc-media-ul a {
+//   display: block;
+//   padding: 0.5em .65rem;
+//   font-size: 1rem;
+//   color: #fff;
+//   border-radius: 50%;
+//   border: 2px solid;
+//
+//   &:hover,
+//   &:focus {
+//     color: $red;
+//   }
+// }
+
+
 
 /* miscellaneous */
 

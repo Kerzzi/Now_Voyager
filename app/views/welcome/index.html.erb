@@ -1,296 +1,443 @@
-<!-- Sidebar on click -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-card-2 w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
-    <i class="fa fa-remove"></i>
-  </a>
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
-  <a href="#" class="w3-bar-item w3-button">Link 4</a>
-  <a href="#" class="w3-bar-item w3-button">Link 5</a>
-</nav>
+<section id="home" class="sec-main">
+    <h1 class="main-heading">同舟共济扬帆起，乘风破浪万里航！</h1>
+</section>
 
-<!-- Navbar -->
-<div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a>
-  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
-  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Work</a>
-  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Price</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-    </div>
-  </div>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
- </div>
+<!-- What We Offer -->
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#team" class="w3-bar-item w3-button">Team</a>
-    <a href="#work" class="w3-bar-item w3-button">Work</a>
-    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
-    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    <a href="#" class="w3-bar-item w3-button">Search</a>
-  </div>
-</div>
+  <section id="services" class="sec-services">
+    <div class="container">
+      <h1>What We Offer?</h1>
 
-<!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-  <img src="/assets/sailboat.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
-  <div class="w3-container w3-display-bottomleft w3-margin-bottom">
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">LEARN W3.CSS</button>
-  </div>
-</div>
+      <hr />
 
-<!-- Modal -->
-<div id="id01" class="w3-modal">
-  <div class="w3-modal-content w3-card-4 w3-animate-top">
-    <header class="w3-container w3-teal w3-display-container">
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
-      <h4>Oh snap! We just showed you a modal..</h4>
-      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
-    </header>
-    <div class="w3-container">
-      <p>Cool huh? Ok, enough teasing around..</p>
-      <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
-    </div>
-    <footer class="w3-container w3-teal">
-      <p>Modal footer</p>
-    </footer>
-  </div>
-</div>
+      <div class="row">
+        <div class="col-sm-4">
+          <i class="fa fa-4x fa fa-building"></i>
 
-<!-- Team Container -->
-<div class="w3-container w3-padding-64 w3-center" id="team">
-<h2>OUR TEAM</h2>
-<p>Meet more teams </p>
+          <h2 class="h3">找项目</h2>
 
-<div class="w3-row"><br>
+          <p>有技术，找不到喜欢的项目？1000+ 项目供你选择, 想你所想！赶快加入“她”！</p>
+        </div>
 
-<div class="w3-quarter">
-  <img src="/assets/team1.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Johnny Walker</h3>
-  <p>Web Designer</p>
-</div>
+        <div class="col-sm-4">
+          <i class="fa fa-4x fa-calendar-o"></i>
 
-<div class="w3-quarter">
-  <img src="/assets/team2.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Rebecca Flex</h3>
-  <p>Support</p>
-</div>
+          <h2 class="h3">个人Show</h2>
 
-<div class="w3-quarter">
-  <img src="/assets/team3.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Jan Ringo</h3>
-  <p>Boss man</p>
-</div>
+          <p>有话说？微博系统，随时随地发现新鲜事！分享你想表达的，让全世界都能听到你的心声。</p>
+        </div>
 
-<div class="w3-quarter">
-  <img src="/assets/team4.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Kai Ringo</h3>
-  <p>Fixer</p>
-</div>
+        <div class="col-sm-4">
+          <i class="fa fa-4x fa-fighter-jet"></i>
 
-</div>
-</div>
+          <h2 class="h3">找伙伴</h2>
 
-<!-- Work Row -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
-
-<div class="w3-quarter">
-<h2>Our Work</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-<div class="w3-quarter">
-<div class="w3-card-2 w3-white">
-  <img src="/w3images/fjords.jpg" alt="Vernazza" style="width:100%">
-  <div class="w3-container">
-  <h3>Customer 1</h3>
-  <h4>Trade</h4>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  </div>
-  </div>
-</div>
-
-<div class="w3-quarter">
-<div class="w3-card-2 w3-white">
-  <img src="/w3images/lights.jpg" alt="Cinque Terre" style="width:100%">
-  <div class="w3-container">
-  <h3>Customer 2</h3>
-  <h4>Trade</h4>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  </div>
-  </div>
-</div>
-
-<div class="w3-quarter">
-<div class="w3-card-2 w3-white">
-  <img src="/w3images/mountains.jpg" alt="Monterosso" style="width:100%">
-  <div class="w3-container">
-  <h3>Customer 3</h3>
-  <h4>Trade</h4>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  </div>
-  </div>
-</div>
-
-</div>
-
-<!-- Container -->
-<div class="w3-container" style="position:relative">
-  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
-  style="position:absolute;top:-28px;right:24px">+</a>
-</div>
-
-<!-- Pricing Row -->
-<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
-    <h2>PRICING</h2>
-    <p>Choose a pricing plan that fits your needs.</p><br>
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-theme">
-          <p class="w3-xlarge">Basic</p>
-        </li>
-        <li class="w3-padding-16"><b>10GB</b> Storage</li>
-        <li class="w3-padding-16"><b>10</b> Emails</li>
-        <li class="w3-padding-16"><b>10</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-        </li>
-      </ul>
-    </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-theme-l2">
-          <p class="w3-xlarge">Pro</p>
-        </li>
-        <li class="w3-padding-16"><b>25GB</b> Storage</li>
-        <li class="w3-padding-16"><b>25</b> Emails</li>
-        <li class="w3-padding-16"><b>25</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 25</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-        </li>
-      </ul>
-    </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-theme">
-          <p class="w3-xlarge">Premium</p>
-        </li>
-        <li class="w3-padding-16"><b>50GB</b> Storage</li>
-        <li class="w3-padding-16"><b>50</b> Emails</li>
-        <li class="w3-padding-16"><b>50</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 50</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-        </li>
-      </ul>
-    </div>
-</div>
-
-<!-- Contact Container -->
-<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
-  <div class="w3-row">
-    <div class="w3-col m5">
-    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
-      <h3>Address</h3>
-      <p>Swing by for a cup of coffee, or whatever.</p>
-      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Ningbo, CN</p>
-      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +86 15188888888</p>
-      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  kerzzi@outlook.com</p>
-    </div>
-    <div class="w3-col m7">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input" type="text" name="Name" required>
+          <p>有想法，找不到合适的伙伴？遇见志同道合的伙伴，让梦想在这里起航！相信我，你并不孤独！</p>
+        </div>
       </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input" type="text" name="Message" required>
-      </div>
-      <input class="w3-check" type="checkbox" checked name="Like">
-      <label>I Like it!</label>
-      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
-      </form>
     </div>
-  </div>
-</div>
+  </section>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
-  <h4>Follow Us</h4>
-  <a class="w3-button w3-large w3-teal" href="https://twitter.com/kerzzi123" title="Facebook"><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-teal" href="https://twitter.com/kerzzi123" title="Twitter"><i class="fa fa-twitter"></i></a>
-  <a class="w3-button w3-large w3-teal" href="https://plus.google.com/?hl=zh-CN" title="Google +"><i class="fa fa-google-plus"></i></a>
-  <a class="w3-button w3-large w3-teal" href="http://kerzzi.logdown.com/" title="Google +"><i class="fa fa-instagram"></i></a>
-  <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.linkedin.com/in/%E9%93%AE-%E5%88%98-5ba56a104/" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-  <p>Design by <a href="http://kerzzi.logdown.com/" target="_blank">Kerzzi</a></p>
 
-  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
-    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
-    <i class="fa fa-chevron-circle-up"></i></span></a>
-  </div>
-</footer>
+  <!-- <section id="testimonials" class="sec-testimonials">
+    <div class="container">
+      <h1>Employees said</h1>
 
-<script>
-// Script for side navigation
-function w3_open() {
-    var x = document.getElementById("mySidebar");
-    x.style.width = "300px";
-    x.style.paddingTop = "10%";
-    x.style.display = "block";
-}
+      <hr />
 
-// Close side navigation
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-}
+      <div class="row">
+        <div class="col-sm-4">
+          <p class="text-center">"OW offer is such amazing. I got my dream work just one week!"</p>
 
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
+          <p class="text-right">&mdash; Elizabeth</p>
+        </div>
+
+        <div class="col-sm-4">
+          <p class="text-center">"Are you paid fairly? Big boss know your worth? Come here, you'll got them!"</p>
+
+          <p class="text-right">&mdash; Milly Cooper</p>
+        </div>
+
+        <div class="col-sm-4">
+          <p class="text-center">"I have worked with several different people and it always seemed like a pain—luckily I found OW offer. Thanks them!"</p>
+
+          <p class="text-right">&mdash; Jerry Lai</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <!-- Rotating Card -->
+  <section id="Rotating-Card" class="sec-card">
+    <div class="container">
+      <h1>Employees said</h1>
+
+      <hr />
+
+        <div class="row">
+         <div class="col-sm-10 col-sm-offset-1">
+             <div class="col-md-4 col-sm-6">
+                 <div class="card-container">
+                    <div class="card">
+                        <div class="front">
+                            <div class="cover">
+                                <img src="https://www.clipartsgram.com/image/129556292-kyz84k3.jpg"/>
+                            </div>
+                            <div class="user">
+                                <img class="img-circle" src="https://www2.mmu.ac.uk/media/mmuacuk/style-assets/images/r-research/profile-Zeyad.jpg"/>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <h3 class="name">John Marvel</h3>
+                                    <p class="profession">CEO</p>
+                                    <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                </div>
+                                <div class="card-footer">
+                                    <i class="fa fa-mail-forward"></i> Auto Rotation
+                                </div>
+                            </div>
+                        </div> <!-- end front panel -->
+                        <div class="back">
+                            <div class="header">
+                                <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <h4 class="text-center">Job Description</h4>
+                                    <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+
+                                    <div class="stats-container">
+                                        <div class="stats">
+                                            <h4>235</h4>
+                                            <p>
+                                                Followers
+                                            </p>
+                                        </div>
+                                        <div class="stats">
+                                            <h4>114</h4>
+                                            <p>
+                                                Following
+                                            </p>
+                                        </div>
+                                        <div class="stats">
+                                            <h4>35</h4>
+                                            <p>
+                                                Projects
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social-links text-center">
+                                    <a href="https://twitter.com/kerzzi123" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                    <a href="https://twitter.com/kerzzi123" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                    <a href="https://twitter.com/kerzzi123" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                </div>
+                            </div>
+                        </div> <!-- end back panel -->
+                    </div> <!-- end card -->
+                </div> <!-- end card-container -->
+            </div> <!-- end col sm 3 -->
+    <!--         <div class="col-sm-1"></div> -->
+            <div class="col-md-4 col-sm-6">
+                 <div class="card-container manual-flip">
+                    <div class="card">
+                        <div class="front">
+                            <div class="cover">
+                                <img src="https://www.clipartsgram.com/image/124089475-california-beaches-tumblr-wallpaper-3.jpg"/>
+                            </div>
+                            <div class="user">
+                                <img class="img-circle" src="http://www.outbrain.com/risingstars/wp-content/uploads/708x708-RS-Profile-Ashley-Callahan-400x400.jpg"/>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <h3 class="name">Andrew Mike</h3>
+                                    <p class="profession">Web Developer</p>
+                                    <p class="text-center">"Lamborghini Mercy <br>Your chick she so thirsty <br>I'm in that two seat Lambo"</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                                        <i class="fa fa-mail-forward"></i> Manual Rotation
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- end front panel -->
+                        <div class="back">
+                            <div class="header">
+                                <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <h4 class="text-center">Job Description</h4>
+                                    <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+
+                                    <div class="stats-container">
+                                        <div class="stats">
+                                            <h4>235</h4>
+                                            <p>
+                                                Followers
+                                            </p>
+                                        </div>
+                                        <div class="stats">
+                                            <h4>114</h4>
+                                            <p>
+                                                Following
+                                            </p>
+                                        </div>
+                                        <div class="stats">
+                                            <h4>35</h4>
+                                            <p>
+                                                Projects
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                    <i class="fa fa-reply"></i> Back
+                                </button>
+                                <div class="social-links text-center">
+                                    <a href="http://kerzzi.logdown.com/" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                    <a href="http://kerzzi.logdown.com/" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                    <a href="http://kerzzi.logdown.com/" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                </div>
+                            </div>
+                        </div> <!-- end back panel -->
+                    </div> <!-- end card -->
+                </div> <!-- end card-container -->
+            </div> <!-- end col sm 3 -->
+    <!--         <div class="col-sm-1"></div> -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="front">
+                            <div class="cover">
+                                <img src="http://www.hdimageson.com/wp-content/uploads/2016/05/beach-images-tumblr-300x188.jpg"/>
+                            </div>
+                            <div class="user">
+                                <img class="img-circle" src="https://1.bp.blogspot.com/-aruLLVlXyJM/V_t-TxTncZI/AAAAAAAAJ3k/hnQKKVmKuOY_awf1nHGTsukGfw4qrde-gCLcB/s400/2.jpg"/>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <h3 class="name">Inna Corman</h3>
+                                    <p class="profession">Product Manager</p>
+
+                                    <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="rating">
+                                        <i class="fa fa-mail-forward"></i> Auto Rotation
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end front panel -->
+                        <div class="back">
+                            <div class="header">
+                                <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <h4 class="text-center">Job Description</h4>
+                                    <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+
+                                    <div class="stats-container">
+                                        <div class="stats">
+                                            <h4>235</h4>
+                                            <p>
+                                                Followers
+                                            </p>
+                                        </div>
+                                        <div class="stats">
+                                            <h4>114</h4>
+                                            <p>
+                                                Following
+                                            </p>
+                                        </div>
+                                        <div class="stats">
+                                            <h4>35</h4>
+                                            <p>
+                                                Projects
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social-links text-center">
+                                    <a href="http://kerzzi.logdown.com/" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                    <a href="http://kerzzi.logdown.com/" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                    <a href="http://kerzzi.logdown.com/" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                </div>
+                            </div>
+                        </div> <!-- end back panel -->
+                    </div> <!-- end card -->
+                </div> <!-- end card-container -->
+            </div> <!-- end col-sm-3 -->
+            </div> <!-- end col-sm-10 -->
+        </div> <!-- end row -->
+        <div class="space-200"></div>
+    </div>
+  </section>
+
+
+
+  <section id="categories">
+		<div class="container">
+			<h1>Categories</h1>
+
+      <hr />
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("developer.png") %>
+			      <div class="caption">
+              <h4> Developer</h4>
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("customer-service.png") %>
+			      <div class="caption">
+			        <h4> Developer</h4>
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("healthcare.png") %>
+			      <div class="caption">
+			        <h4> Developer</h4>
+			      </div>
+			    </div>
+			  </div>
+
+				<div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("sales-marketing.png") %>
+			      <div class="caption">
+			        <h4> Developer</h4>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+			   <div class="thumbnail">
+			      <%= image_tag("lawyer.png") %>
+			      <div class="caption">
+			        <h4> Developer</h4>
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("non-profit.png") %>
+			      <div class="caption">
+			        <h4> Developer</h4>
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("reunion.png") %>
+			      <div class="caption">
+			        <h4> Developer</h4>
+			      </div>
+			    </div>
+			  </div>
+
+				<div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("design.png") %>
+			      <div class="caption">
+			        <h4> Developer</h4>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+
+	</section>
+
+
+  <!-- 用户体验 -->
+
+  <section id="about" class="sec-about">
+    <div class="container">
+      <h1>About Us</h1>
+
+      <hr/>
+
+        <div class="row">
+            <div class="col-md-12" data-wow-delay="0.2s">
+                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                    <!-- Bottom Carousel Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
+                        </li>
+                        <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/rssems/128.jpg" alt="">
+                        </li>
+                        <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="">
+                        </li>
+                    </ol>
+
+                    <!-- Carousel Slides / Quotes -->
+                    <div class="carousel-inner text-center">
+
+                        <!-- Quote 1 -->
+                        <div class="item active">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</p>
+                                        <small>Someone famous</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 2 -->
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                        <small>Someone famous</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 3 -->
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .</p>
+                                        <small>Someone famous</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Buttons Next/Prev -->
+                    <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                    <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
