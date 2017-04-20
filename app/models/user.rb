@@ -8,6 +8,8 @@ class User < ApplicationRecord
                                dependent:   :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
+  has_many :resumes
+
 
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save   :downcase_email  #把 email 属性的值转换为小写形式，确保电子邮件地址的唯一性

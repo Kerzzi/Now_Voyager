@@ -23,7 +23,10 @@ Rails.application.routes.draw do
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
 
-   resources :jobs
+  resources :jobs do
+    resources :resumes
+  end
+
    namespace :admin do
      resources :jobs do
        member do
