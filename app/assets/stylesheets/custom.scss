@@ -13,24 +13,25 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
-// body {
-//   padding-top: 60px;
-// }
-//
-// section {
-//   overflow: auto;
-// }
-//
-// textarea {
-//   resize: vertical;
-// }
-//
-// .center {
-//   text-align: center;
-//   h1 {
-//     margin-bottom: 10px;
-//   }
-// }
+body {
+  padding-top: 60px;
+}
+// 这个如果不设置bootstrap navbar-fixed-top遮挡了下面的内容
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
 
 /* typography */
 
