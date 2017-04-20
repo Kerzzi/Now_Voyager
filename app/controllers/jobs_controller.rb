@@ -3,6 +3,11 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+
+    if @job.is_hidden
+      flash[:warning] = "该项目已归档！"
+      redirect_to root_path
+    end
   end
 
   def index
