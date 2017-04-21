@@ -34,6 +34,7 @@ Rails.application.routes.draw do
 
   namespace :account do
     resources :attention_jobs
+    resources :posts
   end
 
    namespace :admin do
