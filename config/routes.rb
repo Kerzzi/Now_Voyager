@@ -35,6 +35,7 @@ Rails.application.routes.draw do
        end
 
        resources :resumes
+       resources :posts
      end
    end
 
