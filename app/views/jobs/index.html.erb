@@ -1,23 +1,29 @@
 <div class="pull-right">
-  <%= link_to("Add a job", new_job_path, :class => "btn btn-default" ) %>
+  <%= link_to('<span class="glyphicon glyphicon-gift">创建新项目'.html_safe,
+            new_job_path, class: "btn btn-success btn-lg btn3d")%>
 </div>
 
 <% provide(:title, "项目列表") %>
 
 <table class="table table-boldered table-striped custab" >
+  <thead>
+      <tr>
+          <td>项目名称</td>
+          <td>工作城市</td>
+          <td>团队名称</td>
+          <td>需求专业</td>
+          <td>发布时间</td>
+      </tr>
+  </thead>
+
   <% @jobs.each do |job| %>
   <tr>
 
-    <td>
-      <%= link_to(job.title, job_path(job)) %>
-    </td>
-    <td>
-      <%= link_to("Edit", edit_job_path(job)) %> |
-      <%= link_to("Destroy", job_path(job), :method => :delete, :data => { :confirm => "Are you sure?" }) %>
-    </td>
-    <td>
-      <%= job.created_at %>
-    </td>
+    <td><%= link_to(job.title, job_path(job)) %></td>
+    <td><%= job.city %></td>
+    <td><%= job.company %></td>
+    <td><%= job.category %></td>
+    <td><%= job.created_at %></td>
   </tr>
   <% end %>
 </table>

@@ -1,5 +1,6 @@
 <div class="pull-right">
-  <%= link_to("Add a job", new_admin_job_path, :class => "btn btn-default" ) %>
+  <%= link_to('<span class="glyphicon glyphicon-gift">创建新项目'.html_safe,
+            new_job_path, class: "btn btn-success btn-lg btn3d")%>
 </div>
 
 <br><br>
@@ -9,6 +10,9 @@
         <tr>
             <td>项目名称</td>
             <td>收到简历数量</td>
+            <td>工作城市</td>
+            <td>团队名称</td>
+            <td>需求专业</td>
             <td>管理选项</td>
             <td>发布时间</td>
         </tr>
@@ -23,6 +27,9 @@
             <%= link_to(job.title, admin_job_path(job)) %>
         </td>
         <td> <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %> </td>
+        <td><%= job.city %></td>
+        <td><%= job.company %></td>
+        <td><%= job.category %></td>
 
         <td>
             <%= link_to edit_admin_job_path(job), class: "btn btn-xs btn-info" do %><i class="fa fa-pencil"></i><% end %>
@@ -30,7 +37,7 @@
             <% if job.is_hidden %>
                <%= link_to publish_admin_job_path(job) , :method => :post, :class => "btn btn-xs btn-success" do %><i class="fa fa-eye"></i><% end %>
             <% else %>
-            <%= link_to hide_admin_job_path(job), :method => :post,  :class => "btn btn-xs btn-warning" do %><i class="fa fa-eye-slash"></i><% end %>
+               <%= link_to hide_admin_job_path(job), :method => :post,  :class => "btn btn-xs btn-warning" do %><i class="fa fa-eye-slash"></i><% end %>
             <% end %>
         </td>
         <td>
