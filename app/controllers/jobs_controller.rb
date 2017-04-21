@@ -8,7 +8,7 @@ class JobsController < ApplicationController
       flash[:warning] = "该项目已归档！"
       redirect_to root_path
     end
-    @posts = @job.posts
+    @posts = @job.posts.recent.paginate(:page => params[:page], :per_page => 20)
   end
 
   def index
