@@ -28,8 +28,22 @@ Rails.application.routes.draw do
       post :join
       post :quit
     end
+
+    collection do
+      # get :search
+      get :developer
+      get :healthcare
+      get :customer_service
+      get :sales_marketing
+      get :legal
+      get :non_profit
+      get :human_resource
+      get :design
+    end
+
     resources :resumes
     resources :posts
+
   end
 
   namespace :account do

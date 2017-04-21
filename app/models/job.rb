@@ -22,4 +22,7 @@ class Job < ApplicationRecord
   has_many :job_relationships
   has_many :members, through: :job_relationships, source: :user
 
+  scope :recent, -> { order("created_at DESC")}
+  scope :published, -> { where(:is_hidden => false)}
+
 end
