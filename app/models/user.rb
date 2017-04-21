@@ -110,6 +110,10 @@ class User < ApplicationRecord
     following.include?(other_user)
   end
 
+  def is_member_of?(job)
+    participated_jobs.include?(job)
+  end
+
   private
 
     # 把电子邮件地址转换成小写
