@@ -25,6 +25,7 @@ Rails.application.routes.draw do
 
   resources :jobs do
     resources :resumes
+    resources :posts
   end
 
    namespace :admin do
@@ -35,7 +36,6 @@ Rails.application.routes.draw do
        end
 
        resources :resumes
-       resources :posts
      end
    end
 

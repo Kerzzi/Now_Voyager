@@ -4,12 +4,10 @@
 
 <p>
   <%= simple_format(@job.description) %>
-
 </p>
 
-<div class="text-center">
-  <%= link_to('<span class="glyphicon glyphicon-gift">申请加入'.html_safe,
-            new_job_resume_path(@job), class: "btn btn-magick btn-lg btn3d")%>
-</div>
-
+<%= link_to('<span class="glyphicon glyphicon-gift">申请加入'.html_safe,
+            new_job_resume_path(@job), class: "btn btn-magick btn-lg btn3d pull-left")%>
+<%= link_to('<span class="glyphicon glyphicon-cloud">发表评论'.html_safe,
+          new_job_post_path(@job), class: "btn btn-info btn-lg btn3d pull-right")%>
 </hr>
