@@ -8,6 +8,7 @@ class JobsController < ApplicationController
       flash[:warning] = "该项目已归档！"
       redirect_to root_path
     end
+    @posts = @job.posts
   end
 
   def index
