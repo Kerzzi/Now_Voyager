@@ -110,8 +110,18 @@ class User < ApplicationRecord
     following.include?(other_user)
   end
 
+  #用户与项目的关系
   def is_member_of?(job)
     participated_jobs.include?(job)
+  end
+
+  #关注或取消关注项目
+  def join!(job)
+    participated_jobs << job
+  end
+
+  def quit!(job)
+    participated_jobs.delete(job)
   end
 
   private
