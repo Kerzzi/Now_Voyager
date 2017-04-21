@@ -23,6 +23,7 @@ class JobsController < ApplicationController
     @job = Job.new(job_params)
 
     if @job.save
+      current_user.join!(@job)
       redirect_to jobs_path
     else
       render :new
