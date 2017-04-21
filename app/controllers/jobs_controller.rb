@@ -8,11 +8,11 @@ class JobsController < ApplicationController
       flash[:warning] = "该项目已归档！"
       redirect_to root_path
     end
-    @posts = @job.posts.recent.paginate(:page => params[:page], :per_page => 20)
+    @posts = @job.posts.recent.paginate(:page => params[:page], :per_page => 15)
   end
 
   def index
-    @jobs = Job.published.recent
+    @jobs = Job.where(:is_hidden => false).order("created_at DESC")
   end
 
   def new
@@ -78,38 +78,6 @@ class JobsController < ApplicationController
 
     redirect_to job_path(@job)
   end
-
-  # def developer
-  #   @jobs = Job.published.where(:category => "developer").paginate(:page => params[:page], :per_page => 5)
-  # end
-  #
-  # def healthcare
-  #   @jobs = Job.published.where(:category => "healthcare").paginate(:page => params[:page], :per_page => 5)
-  # end
-  #
-  # def customer_service
-  #   @jobs = Job.published.where(:category => "customer_service").paginate(:page => params[:page], :per_page => 5)
-  # end
-  #
-  # def sales_marketing
-  #   @jobs = Job.published.where(:category => "sales_marketing").paginate(:page => params[:page], :per_page => 5)
-  # end
-  #
-  # def legal
-  #   @jobs = Job.published.where(:category => "legal").paginate(:page => params[:page], :per_page => 5)
-  # end
-  #
-  # def non_profit
-  #   @jobs = Job.published.where(:category => "non_profit").paginate(:page => params[:page], :per_page => 5)
-  # end
-  #
-  # def human_resource
-  #   @jobs = Job.published.where(:category => "human_resource").paginate(:page => params[:page], :per_page => 5)
-  # end
-  #
-  # def design
-  #   @jobs = Job.published.where(:category => "design").paginate(:page => params[:page], :per_page => 5)
-  # end
 
   private
 

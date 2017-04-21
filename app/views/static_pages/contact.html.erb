@@ -1,41 +1,9 @@
-<% provide(:title, 'Contact') %>
+<% provide(:title, '联系我们') %>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all',
-                                              'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= render 'layouts/shim' %>
-  </head>
+<div class="container">
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
 
-<!-- 后期重构一下 -->
-  <style>
-  .jumbotron {
-  background: #358CCE;
-  color: #FFF;
-  border-radius: 0px;
-  }
-  .jumbotron-sm { padding-top: 24px;
-  padding-bottom: 24px; }
-  .jumbotron small {
-  color: #FFF;
-  }
-  .h1 small {
-  font-size: 24px;
-  }
-  </style>
-
-  <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-      <% flash.each do |message_type, message| %>
-          <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
-
-    <%= render 'static_pages/contact_us' %>
-
-  </body>
-</html>
+  <%= render 'static_pages/contact_us' %>
+</div>

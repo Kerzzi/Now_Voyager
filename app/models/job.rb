@@ -16,13 +16,14 @@ class Job < ApplicationRecord
     self.save
   end
 
-  belongs_to :user
+  belongs_to :user, required: false
+  # 如果user_id 不填会一直报错rollback transaction网上查找发现, require: false 可以解决
   has_many :posts
   has_many :resumes
   has_many :job_relationships
   has_many :members, through: :job_relationships, source: :user
 
-  scope :recent, -> { order("created_at DESC")}
-  scope :published, -> { where(:is_hidden => false)}
+  # scope :recent, -> { order("created_at DESC")}
+  # scope :published, -> { where(:is_hidden => false)}
 
 end

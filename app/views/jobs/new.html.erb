@@ -10,5 +10,5 @@
 <%= f.input :category, :label => "需求专业" %>
 <!-- <%= f.input :is_hidden %> 新增的项目默认隐藏，网站管理员审核后，可以公开-->
 
-  <%= f.submit "创建项目" %>
+  <%= f.submit "创建项目", :disable_with => 'Submiting...', class: "btn btn-primary" %>
 <% end %>
