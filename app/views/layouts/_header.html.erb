@@ -3,40 +3,37 @@
     <%= link_to "Now Voyager", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <!-- <li class="dropdown">
-          <a href="/" class="dropdown-toggle" data-toggle="dropdown">
-            项目 <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <li> <%= link_to("网站开发", "#") %> </li>
-            <li><%= link_to "形象设计",  "#" %></li>
-            <li><%= link_to "手机应用",  "#" %></li>
-            <li><%= link_to "游戏开发",  "#" %></li>
-          </ul>
-        </li> -->
         <li><%= link_to "项目", jobs_path %></li>
         <li><%= link_to "伙伴", users_path %></li>
         <li><%= link_to "微博", home_path %></li>
         <li><%= link_to "帮助", help_path %></li>
         <% if logged_in? %>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <% if current_user.admin? %>
-                  <li> <%= link_to("Admin Panel", admin_jobs_path) %> </li>
-              <% end %>
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to "Log out", logout_path, method: "delete" %>
-              </li>
-            </ul>
-          </li>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">用户中心<span class="glyphicon glyphicon-user pull-right"></span></a>
+              <ul class="dropdown-menu">
+                <% if current_user.admin? %>
+                  <li> <%= link_to('Admin Panel<span class="glyphicon glyphicon-stats pull-right">'.html_safe, admin_jobs_path) %> </li>
+                <% end %>
+                <li> <%= link_to('Profile <span class="glyphicon glyphicon-cog pull-right">'.html_safe, current_user) %> </li>
+                <li> <%= link_to('Account Settings <span class="glyphicon glyphicon-cog pull-right">'.html_safe, edit_user_path(current_user)) %> </li>
+
+<!-- 下面的图标可以自主选择 -->
+                <li class="divider"></li>
+                <li><a href="#">User stats <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
+                <li class="divider"></li>
+
+                <li><a href="#">Favourites Snippets <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+                <li class="divider"></li>
+                <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+                <li><a href="#">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+              </ul>
+            </li>
+          </ul>
         <% else %>
-          <li><%= link_to "Log in", login_path %></li>
+          <li><%= link_to "注册", signup_path %></li>
+          <li><%= link_to "登录", login_path %></li>
         <% end %>
       </ul>
     </nav>
