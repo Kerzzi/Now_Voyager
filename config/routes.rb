@@ -32,6 +32,10 @@ Rails.application.routes.draw do
     resources :posts
   end
 
+  namespace :account do
+    resources :attention_jobs
+  end
+
    namespace :admin do
      resources :jobs do
        member do

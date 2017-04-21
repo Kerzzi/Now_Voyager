@@ -1,0 +1,28 @@
+<div class="col-md-12">
+
+  <h2 class="text-center"> 我关注的项目 </h2>
+
+  <table class="table table-boldered table-striped custab" >
+    <thead>
+        <tr>
+            <td>项目名称</td>
+            <td>工作城市</td>
+            <td>团队名称</td>
+            <td>需求专业</td>
+            <td>发布时间</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @jobs.each do |job| %>
+            <tr>
+
+              <td><%= link_to(job.title, job_path(job)) %></td>
+              <td><%= job.city %></td>
+              <td><%= job.company %></td>
+              <td><%= job.category %></td>
+              <td><%= job.created_at %></td>
+            </tr>
+        <% end %>
+    </table>
+  <tbody>
+</div>
