@@ -1,25 +1,30 @@
 <% provide(:title, "项目展示") %>
 
+<%= link_to('<span class="glyphicon glyphicon-gift">申请加入'.html_safe,
+            new_job_resume_path(@job), class: "btn btn-magick btn-lg btn3d text-center pull-right")%>
+
+
 <h1> <%= @job.title %> </h1>
 
-<span class="pull-right">
-  <% if current_user && current_user.is_member_of?(@job) %>
-    <label class="label label-success"> 已关注 </label>
-  <% else %>
-    <label class="label label-warning"> 未关注 </label>
-  <% end %>
-</span>
 
 <p>
   <%= simple_format(@job.description) %>
 </p>
 
-<%= link_to('<span class="glyphicon glyphicon-gift">申请加入'.html_safe,
-            new_job_resume_path(@job), class: "btn btn-magick btn-lg btn3d pull-left")%>
-<%= link_to('<span class="glyphicon glyphicon-cloud">发表评论'.html_safe,
-          new_job_post_path(@job), class: "btn btn-info btn-lg btn3d pull-right")%>
-</br>
-</br>
+<div>
+    <span class="pull-left">
+      <% if current_user && current_user.is_member_of?(@job) %>
+        <%= link_to("取消关注", quit_job_path(@job), method: :post, class: "btn btn-info btn-lg btn3d") %>
+        <label class="label label-success"> 已关注 </label>
+      <% else %>
+        <%= link_to("关注项目", join_job_path(@job), method: :post, class: "btn btn-info btn-lg btn3d") %>
+        <label class="label label-warning"> 未关注 </label>
+      <% end %>
+    </span>
+
+    <%= link_to('<span class="glyphicon glyphicon-cloud">发表评论'.html_safe,
+              new_job_post_path(@job), class: "btn btn-info btn-lg btn3d pull-right")%>
+</div>
 
 
 <table class="table table-boldered table-striped custab" >

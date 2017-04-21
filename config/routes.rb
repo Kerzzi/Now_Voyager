@@ -24,6 +24,10 @@ Rails.application.routes.draw do
   resources :relationships,       only: [:create, :destroy]
 
   resources :jobs do
+    member do
+      post :join
+      post :quit
+    end
     resources :resumes
     resources :posts
   end

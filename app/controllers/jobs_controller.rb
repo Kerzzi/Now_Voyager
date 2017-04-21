@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action :logged_in_user, only: [:new, :create, :update, :edit, :destroy]
+  before_action :logged_in_user, only: [:new, :create, :update, :edit, :destroy, :join, :quit]
 
   def show
     @job = Job.find(params[:id])
@@ -48,6 +48,34 @@ class JobsController < ApplicationController
     @job.destroy
 
     redirect_to jobs_path
+  end
+
+  #关注项目
+  def join
+   @job = Job.find(params[:id])
+
+    if !current_user.is_member_of?(@job)
+      current_user.join!(@job)
+      flash[:notice] = "成功关注该项目！"
+    else
+      flash[:warning] = "已经关注该项目！"
+    end
+
+    redirect_to job_path(@job)
+  end
+
+  #取消关注项目
+  def quit
+    @job = Job.find(params[:id])
+
+    if current_user.is_member_of?(@job)
+      current_user.quit!(@job)
+      flash[:alert] = "取消关注该项目！"
+    else
+      flash[:warning] = "未关注该项目！"
+    end
+
+    redirect_to job_path(@job)
   end
 
   private
