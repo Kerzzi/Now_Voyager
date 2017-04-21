@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :resumes
   has_many :jobs
   has_many :posts
+  has_many :job_relationships
+  has_many :participated_jobs, :through => :job_relationships, :source => :job
 
 
   attr_accessor :remember_token, :activation_token, :reset_token
