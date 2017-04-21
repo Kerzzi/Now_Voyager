@@ -1,6 +1,10 @@
 class Job < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
+  validates :city, presence: true
+  validates :company, presence: true
+  validates :category, presence: true
+
 
   def publish!
     self.is_hidden = false
@@ -12,5 +16,5 @@ class Job < ApplicationRecord
     self.save
   end
   has_many :resumes
-  
+
 end
