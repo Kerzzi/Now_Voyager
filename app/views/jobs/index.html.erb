@@ -1,4 +1,6 @@
-<div class="pull-right">
+<!-- 0版 -->
+
+<!-- <div class="pull-right">
   <%= link_to('<span class="glyphicon glyphicon-gift">创建新项目'.html_safe,
             new_job_path, class: "btn btn-success btn-lg btn3d")%>
 </div>
@@ -26,4 +28,93 @@
     <td><%= job.created_at %></td>
   </tr>
   <% end %>
-</table>
+</table> -->
+
+<!--=== 1版  ===-->
+
+<!-- 下面参考snipp:   注意是否跟我已有的项目有冲突 -->
+<!--=== 工作列表 ===-->
+
+<% provide(:title, "项目列表") %>
+
+<div class="pull-right">
+  <%= link_to('<span class="glyphicon glyphicon-gift">创建新项目'.html_safe,
+            new_job_path, class: "btn btn-success btn-lg btn3d")%>
+</div>
+<p></p>
+
+<div class="text-center">
+  <h1><strong>项目列表</strong></h1>
+</div>
+
+
+<div class="row ">
+    <div class="col-md-9 job-content">
+        <% @jobs.each do |job| %>
+          <div class=" job-box">
+
+            <% if @jobs.length > 0 %>
+                <div >
+                    <h4><strong><%= link_to(job.title, job_path(job)) %></strong></h4>
+                </div>
+                <div >
+                    <p style="width: 800px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;"><%= job.description %></p>
+                    <p><%= link_to( "Read more", job_path(job)) %></p>
+                </div>
+                <div>
+                    <p></p>
+                    <p>
+                      <sapn class="fa fa-street-view"></sapn> <%= job.city %>|
+                      <sapn class="fa fa-calendar"></sapn> <%= job.created_at.strftime("%Y-%m-%d") %>|
+                      <sapn class="fa fa-weixin"></sapn> <%= job.posts.count %>|
+
+                      <sapn class="fa fa-tags">Tags : <span class="label label-info"><%= job.company %></span>
+                      <a href="#"><span class="label label-success"><%= job.category %></span></a>
+                    </p>
+                </div>
+
+            <% else %>
+            <!--=== 没有职位资料 ===-->
+                <div >
+                    <h2>此分类暂时没有招聘职位哦，请尝试其他选项。</h2>
+                </div>
+            <% end %>
+          </div>
+        <% end %>
+    </div>
+
+    <div class="col-md-3 side-box">
+      <div class="row">
+          <div class="col-md-12 suggest-title">
+            <h3><sapn class="fa fa-tags"></sapn> <strong>职位推荐</strong></h3>
+          </div>
+          <div>
+              <% @suggests.each do |job| %>
+                  <div class="col-xs-10 col-xs-offset-1 suggest-content">
+                      <div>
+                        <h4>
+                          <%= link_to job_path(job), target: "_blank" do %>
+                              <%= job.title %> [<%= job.city %>]
+                          <% end %>
+                        </h4>
+                      </div>
+                      <div>
+                        <p>招募职位：<%= job.category %></p>
+                      </div>
+                      <div>
+                        <p>团队名称：<%= job.company %></p>
+                      </div>
+                  </div>
+              <% end %>
+          </div>
+      </div>
+    </div>
+</div>
+
+
+
+<!--=== 分页区块 ===-->
+
+  <div class="text-center">
+    <%= will_paginate @jobs %>
+  </div>

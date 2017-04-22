@@ -8,11 +8,14 @@ class JobsController < ApplicationController
       flash[:warning] = "该项目已归档！"
       redirect_to root_path
     end
-    @posts = @job.posts.recent.paginate(:page => params[:page], :per_page => 15)
+    @posts = @job.posts.recent.paginate(:page => params[:page], :per_page => 10)
   end
 
   def index
-    @jobs = Job.where(:is_hidden => false).order("created_at DESC")
+
+    # 随机推荐五个职位 #
+    @suggests = Job.published.random5
+    @jobs = Job.published.recent.paginate(:page => params[:page], :per_page => 10)
   end
 
   def new
