@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170421115951) do
+ActiveRecord::Schema.define(version: 20170423133000) do
 
   create_table "job_relationships", force: :cascade do |t|
     t.integer  "job_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20170421115951) do
     t.string   "city"
     t.string   "company"
     t.string   "category"
+    t.integer  "user_id"
   end
 
   create_table "microposts", force: :cascade do |t|
