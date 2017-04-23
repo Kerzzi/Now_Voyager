@@ -98,6 +98,7 @@ p {
   margin: 0 -15px 12px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
 
   font-size: 1.7em;
+  font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
   color: white;
   // text-transform: uppercase;
   letter-spacing: -1px;
@@ -641,6 +642,7 @@ span.picture {
 
   .navbar-default {
     background: #fff;
+    font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
   }
 
   .navbar .fa-external-link {
@@ -649,11 +651,11 @@ span.picture {
 
   .navbar-inverse .navbar-nav>li>a:hover,
   .navbar-inverse .navbar-nav>li>a:focus {
-    color: $red;
+    color: #fff;
   }
 
   .navbar-inverse .navbar-nav>li>a:active {
-    color: darken($red, 5%);
+    color: #fff;
   }
 
   /*Main*/
@@ -1282,4 +1284,13 @@ span.picture {
       font-size: 14px;
       letter-spacing: 0.5px;
     }
+  }
+
+/*--- elements float with shadow when the mouse hover---*/
+
+  #trip1 {
+      transition: box-shadow 0.7s;
+  }
+  #trip1:hover{
+    box-shadow: 5px 0px 40px #FAFAFA
   }
