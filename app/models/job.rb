@@ -1,9 +1,9 @@
 class Job < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
-  validates :city, presence: true
-  validates :company, presence: true
-  validates :category, presence: true
+  validates :city, presence: true, length: { maximum: 10 }
+  validates :company, presence: true, length: { maximum: 10 }
+  validates :category, presence: true, length: { maximum: 10 }
 
 
   def publish!
