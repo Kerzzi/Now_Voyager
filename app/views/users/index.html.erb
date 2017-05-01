@@ -1,15 +1,16 @@
 <% provide(:title, '伙伴') %>
-<h1>人才库</h1>
+<div class="row">
+    <h1>人才库</h1>
 
-<div class="text-center">
-    <%= will_paginate %>
-<div class="text-center">
+    <div class="text-center">
+        <%= will_paginate %>
+    <div class="text-center">
 
-  <ul class="users">
-    <%= render @users %>
-  </ul>
+      <ul class="users">
+        <%= render @users %>
+      </ul>
 
-
-<div class="text-center">
-    <%= will_paginate %>
-<div class="text-center">
+    <div class="text-center">
+        <%= will_paginate %>
+    <div class="text-center">
+<div>
