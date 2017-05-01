@@ -6,7 +6,7 @@
 <%= f.input :description, :label => "项目描述" %>
 <%= f.input :city, :label => "工作城市" %>
 <%= f.input :company, :label => "团队名称" %>
-<%= f.input :category, :label => "需求专业" %>
+<%= f.input :category, :collection => ["developer","healthcare", "customer-service", "sales-marketing", "legal", "non-profit", "human-resource", "design"], :selected => "developer", :label => "需求专业" %>
 
 <%= f.submit "创建项目", :disable_with => 'Submiting...', class: "btn btn-primary" %>
 <% end %>

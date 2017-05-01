@@ -82,6 +82,54 @@ class JobsController < ApplicationController
     redirect_to job_path(@job)
   end
 
+  def developer
+    # 随机推荐五个职位 #
+    @suggests = Job.published.random5
+    @jobs = Job.published.where(:category => "developer").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def healthcare
+    # 随机推荐五个职位 #
+    @suggests = Job.published.random5
+    @jobs =  Job.published.where(:category => "healthcare").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def customer_service
+    # 随机推荐五个职位 #
+    @suggests = Job.published.random5
+    @jobs = Job.published.where(:category => "customer-service").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def sales_marketing
+    # 随机推荐五个职位 #
+    @suggests = Job.published.random5
+    @jobs = Job.published.where(:category => "sales-marketing").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def legal
+    # 随机推荐五个职位 #
+    @suggests = Job.published.random5
+    @jobs = Job.published.where(:category => "legal").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def non_profit
+    # 随机推荐五个职位 #
+    @suggests = Job.published.random5
+    @jobs = Job.published.where(:category => "non-profit").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def human_resource
+    # 随机推荐五个职位 #
+    @suggests = Job.published.random5
+    @jobs = Job.published.where(:category => "human-resource").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def design
+    # 随机推荐五个职位 #
+    @suggests = Job.published.random5
+    @jobs = Job.published.where(:category => "design").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
   private
 
   def job_params

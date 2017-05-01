@@ -1,7 +1,3 @@
-
-<!--=== 1版  ===-->
-
-<!-- 下面参考snipp:   注意是否跟我已有的项目有冲突 -->
 <!--=== 工作列表 ===-->
 
 <% provide(:title, "项目列表") %>
@@ -21,7 +17,6 @@
     <div class="col-md-9 job-content">
         <% @jobs.each do |job| %>
           <div class=" job-box">
-
             <% if @jobs.length > 0 %>
                 <div >
                     <h4><strong><%= link_to(job.title, job_path(job)) %></strong></h4>
