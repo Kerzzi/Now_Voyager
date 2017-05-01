@@ -59,21 +59,117 @@ jobs_info = [["Web Application Developer","Creates, maintains and implements web
 
 puts "this seed will create  30 public jobs, and 30 hidden jobs"
 
-create_jobs = for i in 1..30 do
+create_jobs = for i in 1..10 do
  job_test=jobs_info[rand(0..4)]
  company_test=company_info[rand(0..8)]
  Job.create!([title: job_test[0],
               description: job_test[1],
-              is_hidden:"true",
+              is_hidden:"false",
               city: "北京",
               company: "网易",
-              category: "Developer",
+              category: "developer",
               user_id: 1])
 end
 
-puts "30 Public jobs created."
+create_jobs = for i in 1..10 do
+ job_test=jobs_info[rand(0..4)]
+ company_test=company_info[rand(0..8)]
+ Job.create!([title: job_test[0],
+              description: job_test[1],
+              is_hidden:"false",
+              city: "上海",
+              company: "百度",
+              category: "developer",
+              user_id: 1])
+end
 
-create_jobs = for i in 1..30 do
+create_jobs = for i in 1..10 do
+ job_test=jobs_info[rand(0..4)]
+ company_test=company_info[rand(0..8)]
+ Job.create!([title: job_test[0],
+              description: job_test[1],
+              is_hidden:"false",
+              city: "广州",
+              company: "新生大学",
+              category: "healthcare",
+              user_id: 1])
+end
+
+create_jobs = for i in 1..10 do
+ job_test=jobs_info[rand(0..4)]
+ company_test=company_info[rand(0..8)]
+ Job.create!([title: job_test[0],
+              description: job_test[1],
+              is_hidden:"false",
+              city: "深圳",
+              company: "Facebook",
+              category: "customer-service",
+              user_id: 1])
+end
+
+create_jobs = for i in 1..10 do
+ job_test=jobs_info[rand(0..4)]
+ company_test=company_info[rand(0..8)]
+ Job.create!([title: job_test[0],
+              description: job_test[1],
+              is_hidden:"false",
+              city: "纽约",
+              company: "三体",
+              category: "sales-marketing",
+              user_id: 1])
+end
+
+create_jobs = for i in 1..10 do
+ job_test=jobs_info[rand(0..4)]
+ company_test=company_info[rand(0..8)]
+ Job.create!([title: job_test[0],
+              description: job_test[1],
+              is_hidden:"false",
+              city: "香港",
+              company: "搜狐",
+              category: "legal",
+              user_id: 1])
+end
+
+create_jobs = for i in 1..10 do
+ job_test=jobs_info[rand(0..4)]
+ company_test=company_info[rand(0..8)]
+ Job.create!([title: job_test[0],
+              description: job_test[1],
+              is_hidden:"false",
+              city: "南京",
+              company: "扬帆社区",
+              category: "non-profit",
+              user_id: 1])
+end
+
+create_jobs = for i in 1..10 do
+ job_test=jobs_info[rand(0..4)]
+ company_test=company_info[rand(0..8)]
+ Job.create!([title: job_test[0],
+              description: job_test[1],
+              is_hidden:"false",
+              city: "芝加哥",
+              company: "Google",
+              category: "human-resource",
+              user_id: 1])
+end
+
+create_jobs = for i in 1..10 do
+ job_test=jobs_info[rand(0..4)]
+ company_test=company_info[rand(0..8)]
+ Job.create!([title: job_test[0],
+              description: job_test[1],
+              is_hidden:"false",
+              city: "新西兰",
+              company: "魔戒剧组",
+              category: "design",
+              user_id: 1])
+end
+
+puts "80 Public jobs created."
+
+create_jobs = for i in 1..10 do
  job_test=jobs_info[rand(0..4)]
  company_test=company_info[rand(0..8)]
  Job.create!([title: job_test[0],
@@ -81,11 +177,11 @@ create_jobs = for i in 1..30 do
                is_hidden:"true",
                city: "上海",
                company: "百度",
-               category: "Developer",
+               category: "healthcare",
                user_id: 1])
 end
 
-puts "30 Hidden jobs created."
+puts "10 Hidden jobs created."
 
 User.create!(name:  "test3",
             email: "test3@kerzzi.com",
