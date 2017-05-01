@@ -1,50 +1,139 @@
 <% provide(:title, "项目展示") %>
 
-<%= link_to('<span class="glyphicon glyphicon-gift">申请加入'.html_safe,
-            new_job_resume_path(@job), class: "btn btn-magick btn-lg btn3d text-center pull-right")%>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h1 ><%= @job.title %></h1>
+  </div>
+
+  <div class="panel-body">
+
+    <div class="job-content">
+      <!--======== Start - Jobs上方区块 =========-->
+      <div class="row">
+        <!--======== Start - 左侧区块 =========-->
+        <div class="col-md-8 col-md-offset-1 job-info-box">
+          <p>
+            <span class="fa fa-building"><%= @job.company %></span>/
+            <span class="fa fa-map-marker"><%= @job.city %></span>  /
+            <span class="fa fa-list"> <%= @job.category %></span>
+           </p>
+          <p class="created"><%= @job.created_at.strftime("%Y-%m-%d") %> <span class="website">发布于扬帆社区</span></p>
+        </div>
+        <!--======== End - 左侧区块 =========-->
+
+        <!--======== Start - 右侧区块 =========-->
+        <div class="col-md-4 job-action-box">
+          <div>
+            <!-- 判断是否已收藏 -->
+            <% if current_user && current_user.is_member_of?(@job) %>
+              <%= link_to quit_job_path(@job), method: :post, class: "btn btn-lg btn-primary" do %>
+                <span class="fa fa-star"></span> 已收藏
+              <% end %>
+            <% else %>
+              <%= link_to join_job_path(@job), method: :post, class: "btn btn-lg btn-default" do %>
+                <span class="fa fa-star-o"></span> 收藏
+              <% end %>
+            <% end %>
+          </div>
+          <div>
+            <!--==== 判断是否已投过简历 ====-->
+            <% if @resumes.length > 0 %>
+              <%= link_to("已投过简历", '#', class: "btn btn-lg btn-danger") %>
+            <% else %>
+              <%= link_to("投递简历", new_job_resume_path(@job), class: "btn btn-lg btn-success") %>
+            <% end %>
+          </div>
+        </div>
+        <!--======== End - 右侧区块 =========-->
+      </div>
+      <!--======== End - Jobs上方区块 =========-->
+    <hr style="width:85%" />
+      <!--======== Start - Jobs下方区块 =========-->
+      <div class="row">
+        <!--======== Start - 左侧区块 =========-->
+        <div class="col-md-7 col-md-offset-1 job-content-box">
+          <div class="content-info">
+            <h4>项目描述：</h4>
+            <p><%= simple_format(@job.description) %></p>
+          </div>
+          <hr />
+          <div class="mail-info">
+            <h4>联络信息：</h4>
+            <p class="email"><span class="glyphicon glyphicon-user"></span>  <%= link_to @user.name, @user %></p>
+            <p class="email"><span class="glyphicon glyphicon-envelope"></span>  <%= link_to @user.email, @user %></p>
+          </div>
+        </div>
+        <!--======== End - 左侧区块 =========-->
+
+        <!--======== Start - 右侧区块 =========-->
+        <% if @sames.length > 0 %>
+        <div class="col-md-3">
+          <div class="same-box">
+            <div class="title">
+              <span>相似职位</span>
+            </div>
+            <% @sames.each do |job| %>
+              <div class="same-content">
+                <div>
+                  <h3>
+                    <%= link_to job_path(job), target: "_blank" do %>
+                      <%= job.title %> [<%= job.city %>]
+                    <% end %>
+                  </h3>
+                </div>
+
+                <div><span><%= job.company %></span></div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <% end %>
+        <!--======== End - 右侧区块 =========-->
+      </div>
+      <!--======== End - Jobs下方区块 =========-->
+    </div>
+    <hr style="width:85%"/>
+
+    <div class="container">
+        <div class="col-lg-11 col-sm-12 text-center">
+
+        <div class="well">
+            <h4>What is on your mind?</h4>
 
 
-<h1> <%= @job.title %> </h1>
+            <div class="input-group">
+                <input  type="text" id="userComment" class="form-control input-lg chat-input" placeholder="Write your message here..." />
+        	    <span class="input-group-btn" onclick="addComment()">
+                <%= link_to('<span class="glyphicon glyphicon-comment">发表评论'.html_safe,new_job_post_path(@job), class: "btn btn-primary btn-lg ")%>
+                </span>
+            </div>
 
-<p>
-  <%= simple_format(@job.description) %>
-</p>
+        <hr style="width:85%"/>
+          <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable">
 
-<div>
-    <span class="pull-left">
-      <% if current_user && current_user.is_member_of?(@job) %>
-        <%= link_to("取消关注", quit_job_path(@job), method: :post, class: "btn btn-info btn-lg btn3d") %>
-        <label class="label label-success"> 已关注 </label>
-      <% else %>
-        <%= link_to("关注项目", join_job_path(@job), method: :post, class: "btn btn-info btn-lg btn3d") %>
-        <label class="label label-warning"> 未关注 </label>
-      <% end %>
-    </span>
+            <div class="job-posts">
+              <% @posts.each do |post| %>
+                  <li >
+                    <%= link_to gravatar_for( post.user, size: 50), post.user %>
+                    <p>
+                    <span class="user pull-left"><%= link_to post.user.name, post.user %></span>
 
-    <%= link_to('<span class="glyphicon glyphicon-cloud">发表评论'.html_safe,
-              new_job_post_path(@job), class: "btn btn-info btn-lg btn3d pull-right")%>
+                    <span class="glyphicon glyphicon-time pull-right">
+                      Posted <%= time_ago_in_words(post.created_at) %> ago.
+                    </span><br/>
+
+                    <span class="content pull-left">
+                      <%= post.content %>
+                    </span><br/>
+                    </p>
+                  </li>
+                  <hr style="width:100%"/>
+              <% end %>
+            </div>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-<table class="table table-boldered table-striped custab" >
-  <thead>
-   <tr>
-      <th>评论内容</th>
-      <th>发表者</th>
-      <th>发表时间</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.content %></td>
-        <td><%= post.user.name %></td>
-        <td><%= post.created_at %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<div class="text-center">
-    <%= will_paginate @posts %>
-<div class="text-center">

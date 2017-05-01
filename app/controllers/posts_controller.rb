@@ -20,6 +20,13 @@ class PostsController < ApplicationController
     end
   end
 
+  # def destroy
+  #   @job = Job.find(params[:job_id])
+  #   @post = Post.find(params[:post_id])
+  #
+  #   @post.destroy
+  #   redirect_to job_path(@job)
+  # end
 
   private
 

@@ -1368,6 +1368,129 @@ span.picture {
     }
   }
 
+
+
+  /*===== Start Job#Show ====*/
+
+ .job-info-box{
+   color: #333;
+   font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+
+   h3{
+     text-align: left;
+     color: #3D537F;
+   }
+
+   p{
+     font-size: 16px;
+     color: #666;
+   }
+   .company{
+     font-size: 20px;
+     color: #999;
+   }
+
+   .wage{
+     color: #FF7D0A;
+     letter-spacing: -1px;
+     font-size: 18px;
+   }
+
+   .created{
+     color: #999;
+     font-size: 14px;
+   }
+
+   .website{
+     letter-spacing: 1px;
+   }
+ }
+
+ .job-action-box{
+   text-align: right;
+   margin-top: 25px;
+   margin-right: 25px;
+
+   div{
+     width: 200px;
+     display: inline;
+   }
+
+   .btn-lg{
+     width: 125px;
+   }
+ }
+
+ .job-content-box{
+   letter-spacing: 0.5px;
+
+   h4{
+     color: #004080;
+   }
+
+   .content-info{
+     min-height: 450px;
+     p{
+       line-height: 30px;
+     }
+   }
+
+   .mail-info{
+     margin-bottom: 75px;
+     font-size: 18px;
+
+     .email{
+       font-size: 16px;
+     }
+   }
+ }
+ .same-box{
+   padding: 15px;
+
+   .title{
+     font-size: 20px;
+     font-weight: 500;
+     color: #004080;
+     margin-bottom: 7.5px;
+   }
+
+   span::after{
+     content: "";
+     position: absolute;
+     top: 30px;
+     left: 120px;
+     display: inline-block;
+     width: 150px;
+   }
+
+   .same-content{
+     width: 240px;
+     background-color: #fff;
+     padding: 2px 2px 12px 12px;
+     border: 0.5px dashed #ccc;
+
+     div{
+       margin-top: -5px;
+       margin-bottom: -5px;
+     }
+     h3{
+       font-size: 16px;
+     }
+     p{
+       font-size: 16px;
+       color: #FF7D0A;
+       letter-spacing: -1px;
+     }
+     span{
+       color: #aaa;
+       font-size: 14px;
+       letter-spacing: 0.5px;
+     }
+   }
+ }
+
+   /*===== End Job#Show ====*/
+
 /*--- elements float with shadow when the mouse hover---*/
 
   #trip1 {
