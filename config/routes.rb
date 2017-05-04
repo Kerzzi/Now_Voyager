@@ -30,7 +30,7 @@ Rails.application.routes.draw do
     end
 
     collection do
-      # get :search
+      get :search
       get :developer
       get :healthcare
       get :customer_service

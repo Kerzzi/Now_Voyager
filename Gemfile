@@ -44,6 +44,9 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'simple_form'
 gem 'font-awesome-rails'
+gem 'ransack'
+gem 'seo_helper'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

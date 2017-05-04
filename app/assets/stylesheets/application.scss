@@ -93,7 +93,7 @@ p {
 
 #logo {
   float: left;
-  margin-right: 10px;
+  // margin-right: 10px;
 
   margin: 0 -15px 12px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
 
@@ -110,6 +110,14 @@ p {
   }
 }
 
+#search-id {
+  width: 650px;
+
+}
+
+.search-box{
+  margin-bottom: 50px;
+}
 
 /* footer */
 
@@ -1302,7 +1310,7 @@ span.picture {
 
 .job-content{
   min-height: 725px;
-  margin-top: 100px;
+  margin-top: 1px;
 
   a{
     text-decoration: none;
@@ -1311,7 +1319,7 @@ span.picture {
   .side-box{
     display: inline-block;
     position: absolute;
-    margin-top: 112px;
+    margin-top: 50px;
     margin-left: 35px;
     padding-bottom: 12.5px;
     min-width: 260px;
